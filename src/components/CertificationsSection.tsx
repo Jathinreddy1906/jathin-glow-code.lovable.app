@@ -2,25 +2,19 @@ import { useEffect, useRef } from 'react';
 
 const certifications = [
   {
-    title: 'Python Certification',
-    issuer: 'Certified Authority',
+    title: 'Python & Data Science',
+    issuer: 'Certification',
     icon: '🐍',
     color: 'primary',
   },
   {
-    title: 'Data Science Certification',
-    issuer: 'Professional Certification',
-    icon: '📊',
-    color: 'secondary',
-  },
-  {
     title: 'Introduction to Machine Learning',
-    issuer: 'Swayam NPTEL',
+    issuer: 'NPTEL / Swayam',
     icon: '🤖',
     color: 'neon-pink',
   },
   {
-    title: 'Generative AI Fundamentals',
+    title: 'Generative AI',
     issuer: 'LinkedIn Learning',
     icon: '✨',
     color: 'primary',
@@ -32,7 +26,7 @@ const certifications = [
     color: 'secondary',
   },
   {
-    title: 'Future Skills Prime',
+    title: 'Future Skill Prime',
     issuer: 'NASSCOM',
     icon: '🚀',
     color: 'neon-pink',
@@ -101,11 +95,6 @@ const CertificationsSection = () => {
                 {/* Decorative line */}
                 <div className="mt-4 h-px bg-gradient-to-r from-primary/30 via-secondary/30 to-transparent group-hover:from-primary/60 group-hover:via-secondary/60 transition-all duration-300" />
 
-                {/* Verified badge */}
-                <div className="mt-4 flex items-center gap-2 text-xs">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="font-mono text-muted-foreground">Verified</span>
-                </div>
               </div>
             </div>
           ))}

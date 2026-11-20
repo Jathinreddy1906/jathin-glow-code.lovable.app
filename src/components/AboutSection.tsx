@@ -2,32 +2,18 @@ import { useEffect, useRef } from 'react';
 
 const timelineData = [
   {
-    year: '2022 - Present',
-    title: 'B.Tech Computer Science Engineering',
-    organization: 'The Apollo University',
-    description: 'CGPA: 7.0 | Expected Graduation: 2026',
-    icon: '🎓',
+    year: '2026 – Present',
+    title: 'Data Engineer Intern',
+    organization: 'Resolence Private Limited',
+    description: 'Building ETL workflows with Python, PostgreSQL, and AWS services.',
+    icon: '▤',
   },
   {
-    year: '2023 - Present',
-    title: 'CSI Technical Lead & Student Coordinator',
-    organization: 'Computer Society of India',
-    description: 'Leading technical initiatives and coordinating student activities',
-    icon: '💻',
-  },
-  {
-    year: '2022 - Present',
-    title: 'NSS Volunteer',
-    organization: 'National Service Scheme',
-    description: 'Contributing to community service and social welfare programs',
-    icon: '🤝',
-  },
-  {
-    year: '2022 - Present',
-    title: 'Sports Club Member',
-    organization: 'University Sports Club',
-    description: 'Active participation in team sports and athletics',
-    icon: '⚽',
+    year: '2022 – 2026',
+    title: 'B.Tech, Computer Science & Engineering',
+    organization: 'The Apollo University · Chittoor',
+    description: 'CGPA: 7.39 / 10',
+    icon: '⌘',
   },
 ];
 
@@ -69,26 +55,21 @@ const AboutSection = () => {
                 Career Summary
               </h3>
               <p className="font-rajdhani text-lg text-muted-foreground leading-relaxed mb-4">
-                I'm a passionate <span className="text-primary">Full Stack Developer</span> with a 
-                strong foundation in Python and growing expertise in Data Science and Machine Learning. 
-                Currently pursuing my B.Tech in Computer Science, I'm driven by the challenge of 
-                building innovative solutions that bridge technology and real-world problems.
+                I'm a <span className="text-primary">Data Engineer</span> and Computer Science Engineering graduate with hands-on experience building ETL pipelines, validating data, and loading it into PostgreSQL.
               </p>
               <p className="font-rajdhani text-lg text-muted-foreground leading-relaxed">
-                As a <span className="text-secondary">CSI Technical Lead</span>, I lead technical 
-                initiatives while mentoring fellow students. My goal is to leverage AI and modern 
-                web technologies to create impactful applications that make a difference.
+                At <span className="text-secondary">Resolence Private Limited</span>, I work with Python, SQL, and AWS to automate data workflows. I’m seeking Data Engineer or Python Developer opportunities.
               </p>
             </div>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               <div className="glass-card p-6 rounded-xl text-center group hover:border-primary/50 transition-all duration-300">
-                <p className="font-orbitron text-3xl font-bold text-primary group-hover:scale-110 transition-transform">5+</p>
-                <p className="font-rajdhani text-muted-foreground">Projects Built</p>
+                <p className="font-orbitron text-3xl font-bold text-primary group-hover:scale-110 transition-transform">3</p>
+                <p className="font-rajdhani text-muted-foreground">Featured Projects</p>
               </div>
               <div className="glass-card p-6 rounded-xl text-center group hover:border-primary/50 transition-all duration-300">
-                <p className="font-orbitron text-3xl font-bold text-secondary group-hover:scale-110 transition-transform">6+</p>
+                <p className="font-orbitron text-3xl font-bold text-secondary group-hover:scale-110 transition-transform">5</p>
                 <p className="font-rajdhani text-muted-foreground">Certifications</p>
               </div>
             </div>

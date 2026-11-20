@@ -1,71 +1,51 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 const skillCategories = [
   {
-    title: 'Languages',
+    title: 'Programming',
     icon: '{ }',
     skills: [
-      { name: 'Python', level: 85 },
-      { name: 'JavaScript', level: 75 },
-      { name: 'SQL', level: 80 },
-      { name: 'C', level: 65 },
+      'Python', 'SQL', 'JavaScript',
     ],
   },
   {
-    title: 'Web Technologies',
+    title: 'Data Engineering',
+    icon: '▤',
+    skills: [
+      'ETL / ELT Pipelines', 'Data Cleaning & Validation', 'pandas', 'PySpark', 'Power BI',
+    ],
+  },
+  {
+    title: 'Cloud & Databases',
+    icon: '☁',
+    skills: [
+      'AWS S3', 'Lambda', 'Glue', 'Athena', 'IAM', 'PostgreSQL', 'Firebase', 'Google Cloud Platform',
+    ],
+  },
+  {
+    title: 'Developer Tools',
     icon: '</>',
     skills: [
-      { name: 'HTML5', level: 90 },
-      { name: 'CSS3', level: 85 },
-      { name: 'React', level: 70 },
-    ],
-  },
-  {
-    title: 'Tools & Platforms',
-    icon: '⚙️',
-    skills: [
-      { name: 'GitHub', level: 80 },
-      { name: 'Firebase', level: 70 },
-      { name: 'Tkinter', level: 75 },
-      { name: 'Google Cloud', level: 60 },
-    ],
-  },
-  {
-    title: 'Soft Skills',
-    icon: '🧠',
-    skills: [
-      { name: 'Communication', level: 90 },
-      { name: 'Team Collaboration', level: 95 },
-      { name: 'Problem Solving', level: 85 },
-      { name: 'Adaptability', level: 90 },
+      'Git', 'GitHub', 'Docker', 'VS Code', 'REST APIs', 'pytest',
     ],
   },
 ];
 
 const SkillsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [animatedSkills, setAnimatedSkills] = useState<Set<string>>(new Set());
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            // Trigger skill bar animations
-            const skillName = entry.target.getAttribute('data-skill');
-            if (skillName) {
-              setTimeout(() => {
-                setAnimatedSkills((prev) => new Set([...prev, skillName]));
-              }, 200);
-            }
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll('.reveal, [data-skill]');
+    const elements = sectionRef.current?.querySelectorAll('.reveal');
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -102,33 +82,11 @@ const SkillsSection = () => {
               </div>
 
               {/* Skills List */}
-              <div className="space-y-5">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    data-skill={`${category.title}-${skill.name}`}
-                    className="reveal"
-                    style={{ transitionDelay: `${(catIndex * 100) + (skillIndex * 50)}ms` }}
-                  >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-rajdhani font-semibold text-foreground">
-                        {skill.name}
-                      </span>
-                      <span className="font-mono text-primary text-sm">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="skill-bar">
-                      <div
-                        className="skill-bar-fill transition-all duration-1000 ease-out"
-                        style={{
-                          width: animatedSkills.has(`${category.title}-${skill.name}`)
-                            ? `${skill.level}%`
-                            : '0%',
-                        }}
-                      />
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span key={skill} className="px-3 py-2 rounded-md bg-muted/50 font-mono text-sm text-muted-foreground">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
@@ -141,7 +99,7 @@ const SkillsSection = () => {
             Also familiar with:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['REST APIs', 'Git', 'VS Code', 'Jupyter', 'Pandas', 'NumPy', 'Matplotlib', 'Linux Basics'].map(
+            {['AWS Glue Data Catalog', 'Athena SQL', 'Boto3', 'psycopg2', 'CSV & Parquet'].map(
               (skill, index) => (
                 <span
                   key={index}

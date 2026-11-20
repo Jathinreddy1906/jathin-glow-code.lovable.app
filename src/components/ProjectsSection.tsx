@@ -2,38 +2,38 @@ import { useEffect, useRef } from 'react';
 
 const projects = [
   {
-    title: 'Real-Time Auction & Bidding System',
-    description: 'A comprehensive platform for live auctions with real-time bidding capabilities, user authentication, and payment integration.',
-    techStack: ['Python', 'Firebase', 'JavaScript', 'HTML/CSS'],
-    github: '#',
+    title: 'AWS Data Pipeline with Python and Boto3',
+    description: 'Automated CSV ingestion from S3 triggers a Glue job to clean and deduplicate sales data, write partitioned Parquet, and catalog it for Athena queries. Includes validation, least-privilege IAM, and pytest checks.',
+    techStack: ['Python', 'Boto3', 'S3', 'Lambda', 'Glue / PySpark', 'Athena', 'IAM'],
+    github: 'https://github.com/Jathinreddy1906/AWS-Data-Pipeline-with-Python-and-Boto3--R',
     gradient: 'from-primary to-secondary',
   },
   {
-    title: 'Language Translator',
-    description: 'A Python-based translation tool supporting multiple languages with a clean GUI built using Tkinter.',
-    techStack: ['Python', 'Tkinter', 'Google Translate API'],
-    github: '#',
+    title: 'API-to-PostgreSQL Data Ingestion',
+    description: 'Fetches users and posts from a REST API, validates records with pandas, and loads them into PostgreSQL with safe upserts. Includes SQL reporting queries.',
+    techStack: ['Python', 'pandas', 'REST API', 'PostgreSQL', 'psycopg2'],
+    github: 'https://github.com/Jathinreddy1906/API-to-PostgreSQL-Data-Ingestion--R',
     gradient: 'from-secondary to-neon-pink',
   },
   {
-    title: 'Library Community Management',
-    description: 'Full-featured library management system for book tracking, member management, and community engagement.',
-    techStack: ['Python', 'SQL', 'Tkinter'],
-    github: '#',
+    title: 'Customer Order ETL',
+    description: 'Cleans customer, order, and product CSVs into a joined order report, calculates totals, and logs each run. Unknown customer IDs are saved separately so records are not lost.',
+    techStack: ['Python', 'pandas', 'CSV'],
+    github: 'https://github.com/Jathinreddy1906/customer_order_etl_project.',
     gradient: 'from-neon-pink to-primary',
   },
   {
     title: 'Cosmic Play',
     description: 'Interactive web application for creating and participating in polls with real-time results visualization.',
     techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
-    github: '#',
+    github: 'https://github.com/Jathinreddy1906',
     gradient: 'from-primary to-neon-purple',
   },
   {
     title: 'Reminder Remix',
     description: 'Smart reminder application with customizable notifications, recurring reminders, and a user-friendly interface.',
     techStack: ['Python', 'Tkinter', 'SQLite'],
-    github: '#',
+    github: 'https://github.com/Jathinreddy1906',
     gradient: 'from-neon-purple to-secondary',
   },
 ];
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {projects.slice(0, 3).map((project, index) => (
             <div
               key={index}
               className="reveal group"

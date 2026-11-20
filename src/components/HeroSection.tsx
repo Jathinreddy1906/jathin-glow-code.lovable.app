@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const titles = [
-  'Full Stack Developer',
-  'Python Enthusiast',
-  'Data Science Explorer',
-  'AI & ML Learner',
+  'Data Engineer',
+  'Python Developer',
+  'ETL Pipeline Builder',
+  'AWS Data Workflows',
 ];
 
 const HeroSection = () => {
@@ -62,7 +62,7 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Greeting */}
           <p className="font-mono text-primary text-sm md:text-base mb-4 tracking-widest animate-fade-in">
-            {'// WELCOME TO MY DIGITAL SPACE'}
+            {'// DATA ENGINEERING · PYTHON · AWS'}
           </p>
 
           {/* Name */}
@@ -85,8 +85,7 @@ const HeroSection = () => {
 
           {/* Tagline */}
           <p className="font-rajdhani text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            Building innovative solutions at the intersection of web development, 
-            artificial intelligence, and data science.
+            Computer Science Engineering graduate and Data Engineer Intern building reliable ETL pipelines, API integrations, and AWS-based data workflows.
           </p>
 
           {/* CTA Buttons */}
